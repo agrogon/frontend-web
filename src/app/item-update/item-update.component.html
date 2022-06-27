@@ -1,0 +1,17 @@
+<form>
+  <div class="data">
+    <ul class="list-unstyled">
+      <h3 class="text-center">Modify its moveset</h3>
+      <div *ngIf="pokemonDetails">
+       <li contenteditable="true" *ngFor="let detail of pokemonDetails"> {{detail}} </li>
+       Click to update movement set
+       <i (click)="openModal('custom-modal-1')" class="material-icons">update</i>
+       <jw-modal id="custom-modal-1">
+        <p>Changes have been done</p>
+        <button (click)="closeModal('custom-modal-1');">Close</button>
+      </jw-modal> 
+    </div>
+  </ul>
+</div>
+</form>
+<button (click)="backClicked();">Close</button>

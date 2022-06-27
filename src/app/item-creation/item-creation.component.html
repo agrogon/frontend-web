@@ -1,0 +1,24 @@
+<form>
+  <div class="data">
+    <ul class="list-unstyled">
+      <h3 class="text-center">Create your own pokemon</h3>
+      <div>
+       <p>ID</p> <li contenteditable="true"> </li>
+       <p>Name</p> <li contenteditable="true"> </li>
+       <p>Ability Nº1</p> <li contenteditable="true"> </li>
+       <p>Ability Nº2</p> <li contenteditable="true"> </li>
+       <p>Ability Nº3</p> <li contenteditable="true"> </li>
+       <p>Ability Nº4</p> <li contenteditable="true"> </li>
+       Click to create your own
+       <i (click)="openModal('custom-modal-1')" class="material-icons">create</i>
+       <jw-modal id="custom-modal-1">
+        <p>Changes have been done</p>
+        <button (click)="closeModal('custom-modal-1');">Close</button>
+      </jw-modal> 
+    </div>
+  </ul>
+</div>
+</form>
+<button (click)="backClicked();">Close</button>
+
+

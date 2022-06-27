@@ -1,0 +1,16 @@
+<form>
+  <div>
+    <h3 class="text-center">Create pokemon</h3>
+    <span class="input-group-text" routerLink="/item-creation">
+      <i class="material-icons">add</i></span>
+    </div>
+  </form>
+  <form>
+    <div class="data">
+      <ul class="list-unstyled">
+        <div *ngIf="pokemonName">
+         <li *ngFor="let name of pokemonName"> {{name}} <i routerLink="/item-update" [state]="{data:name}" class="material-icons">update </i> <i routerLink="/item-details" [state]="{data:name}" class="material-icons">description</i></li>
+      </div>
+    </ul>
+  </div>
+</form>

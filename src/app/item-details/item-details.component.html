@@ -1,0 +1,25 @@
+<form>
+  <div class="data">
+    <ul>
+      <h3 class="text-center">Sprite</h3>
+      <div>
+        <i (click)="openModal('custom-modal-1')" style="width:42px;height:42px;">  <img src= {{pokemonImage}} style="width:42px;height:42px;"></i>
+        <p>Click to resize*</p>
+        <jw-modal id="custom-modal-1">
+         <img src= {{pokemonImage}}>
+         <div>
+          <button (click)="closeModal('custom-modal-1');">Close</button>
+        </div>
+      </jw-modal> 
+    </div>
+  </ul>
+  <ul class="list-unstyled">
+    <h3 class="text-center">Moveset</h3>
+    <div *ngIf="pokemonDetails">
+     <li *ngFor="let details of pokemonDetails"> {{details}} </li>
+   </div>
+ </ul>
+</div>
+</form>
+<button (click)="backClicked();">Close</button>
+
